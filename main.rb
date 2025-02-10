@@ -9,7 +9,7 @@ elec_usuario = gets.chomp.downcase
 
 # Si lo que ingresó el usuario no es válido, se entra en el if y se indica al usuario que lo que ingresó no es válido.
 unless opciones.include?(elec_usuario)
-  puts "Elección no válida, intenta de nuevo..." #<====== Incluir lo que el usuario introdujo y decir que ese valor no es válido
+  puts "--> #{elec_usuario} <-- no es válido"
 end
 
 end until opciones.include?(elec_usuario) # ---> El loop terminará si la elección que ingresó el usuario es válida.
