@@ -1,0 +1,75 @@
+# Entornos virtuales
+env/
+venv/
+ENV/
+.env
+.venv/
+pythonenv*
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+
+# Archivos de configuración de editores
+## VS Code
+.vscode/
+*.code-workspace
+
+## Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+## Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+## JetBrains IDEs (PyCharm, etc)
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+## Vim
+*.swp
+*.swo
+.vim/
+
+# Archivos específicos de Linux/Ubuntu
+.directory
+.Trash-*
+.nfs*
+*~
+.fuse_hidden*
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Archivos de distribución/compilación
+dist/
+build/
+*.egg
+*.egg-info/
+.eggs/
+*.pyc
+*.pyo
+
+# Archivos de cobertura y testing
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+.coverage.*
+coverage.xml
+*.cover
