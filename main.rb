@@ -3,14 +3,14 @@ opciones = ["piedra", "papel", "tijera"]
 
 begin # ----> Loop que se repetirá hasta que el usuario ingrese una opción válida.
 
-# Solicitar al usuario que escoja una de las opciones y a continuación se captura.
-puts "¿Piedra papel o tijera?"
-elec_usuario = gets.chomp.downcase
+  # Solicitar al usuario que escoja una de las opciones y a continuación se captura.
+  puts "¿Piedra papel o tijera?"
+  elec_usuario = gets.chomp.downcase
 
-# Si lo que ingresó el usuario no es válido, se entra en el if y se indica al usuario que lo que ingresó no es válido.
-if !opciones.include?(elec_usuario)
-  puts "Elección no válida, intenta de nuevo..."
-end
+  # Si lo que ingresó el usuario no es válido, se entra en el if y se indica al usuario que lo que ingresó no es válido.
+  if !opciones.include?(elec_usuario) # <--- Se puede cambiar ese if por un unless (unless opciones.include?(elec_usuario)).
+    puts "Elección no válida, intenta de nuevo..."
+  end
 
 end until opciones.include?(elec_usuario) # ---> El loop terminará si la elección que ingresó el usuario es válida.
 
