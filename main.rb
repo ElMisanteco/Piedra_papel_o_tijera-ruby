@@ -8,7 +8,7 @@ puts "¿Piedra papel o tijera?"
 elec_usuario = gets.chomp.downcase
 
 # Si lo que ingresó el usuario no es válido, se entra en el if y se indica al usuario que lo que ingresó no es válido.
-if !opciones.include?(elec_usuario)
+unless opciones.include?(elec_usuario)
   puts "Elección no válida, intenta de nuevo..."
 end
 
