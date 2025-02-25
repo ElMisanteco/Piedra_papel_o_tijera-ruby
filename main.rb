@@ -52,27 +52,31 @@ def piepaptij()
 end
 
 
+def quienGana()
 
-victoria_total_pc = 0
-victoria_total_usuario = 0
+  victoria_total_pc = 0
+  victoria_total_usuario = 0
 
-begin
+  begin
 
-  ganador = piepaptij()
+    ganador = piepaptij()
 
-  if ganador == "computadora"
-    victoria_total_pc = victoria_total_pc +1
-  elsif ganador == "usuario"
-    victoria_total_usuario = victoria_total_usuario + 1
+    if ganador == "computadora"
+      victoria_total_pc = victoria_total_pc +1
+    elsif ganador == "usuario"
+      victoria_total_usuario = victoria_total_usuario + 1
+    end
+
+    puts "Usuario: #{victoria_total_usuario}"
+    puts "Computadora:  #{victoria_total_pc}"
+
+  end until victoria_total_pc == 2 || victoria_total_usuario == 2
+
+  if victoria_total_pc < victoria_total_usuario
+    puts "🎉🥳 🏆Felicidades, Tú eres el ganador🏆 🥳🎉"
+  else
+   puts "😿🤙 Perdiste, que mala suerte 😿🤙"
   end
 
-  puts "Usuario: #{victoria_total_usuario}"
-  puts "Computadora:  #{victoria_total_pc}"
-
-end until victoria_total_pc == 2 || victoria_total_usuario == 2
-
-if victoria_total_pc < victoria_total_usuario
-  puts "🎉🥳 🏆Felicidades, Tú eres el ganador🏆 🥳🎉"
-else
- puts "😿🤙 Perdiste, que mala suerte 😿🤙"
 end
+
