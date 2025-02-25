@@ -88,32 +88,35 @@ puts "\n ++++++++++++++++++++++++++++++++++++++++++++"
 end #<---- Fin de funcion 3 de 3
 
 # Implementación para elegir jugar una vez o 2 de 3
-jugar = true
 
-while true
+jugar = true # <-- Esta variable es la que se toma en cuenta para seguir jugando o no (Posteriormente tendrá un uso más especifico)
 
-  puts ""
+while true # <-- Este bucle es el que decidirá si seguir jugando o no.
+
+  # Menú de opciones.
+  puts "" # <-- solo inserta un espacio.
   puts " 1 ==> jugar una vez"
   puts " 2 ==> Jugar 2 de tres"
-  print "¿Qué modo de juego quieres jugar? "
-  respuesta_tipo_juego = gets.chomp.to_i
+  print "¿Qué modo de juego quieres jugar? " #<-- Indica al usuario que escriba la opción deseada.
+  respuesta_tipo_juego = gets.chomp.to_i # <--Captura la elección del usuario y la transforma en número entero.
 
+  #Con la siguiente estructura de if se evalúa lo que el usuario ingresó y se ejecuta la acción pertinente.
   if respuesta_tipo_juego == 1
 
-    puts "\nJugar una vez..."
-    piepaptij
-    return false
+    puts "\nJugar una vez..." # <-- Se indica el tipo de juego.
+    piepaptij # <-- Se llama el método que se ejecuta una vez.
+    return false # <-En caso de que el usuario escoja esta opción, después de ejecutar la acción de juego, se retorna <falso> para que el bucle se termine.
 
   elsif respuesta_tipo_juego == 2
 
-    puts "\nJugar 2 de tres..."
-    quienGana
-    return false
+    puts "\nJugar 2 de tres..." # <-- Se indica el tipod e juego.
+    quienGana #<-- Se llama al método que ejecuta el juego en modo 2 de 3.
+    return false # <- En caso de que el usuario escoja esta opción, después de ejecutar la acción de juego, se retorna <falso> para que el bucle se termine.
 
   else
 
-    puts "\nEscribe una opción válida."
+    puts "\nEscribe una opción válida." # <- En caso de que el usuario escoja una opción que no esté contemplada, se muestra el mensaje que indica que la entrada no es válida y retorna <true> (no se indica ya que por defecto esta en modo true) para que el ciclo se repita y se muestre el menú.
 
-  end
+  end # <-- find e estructura if
 
-end
+end # <-- Fin de estructura while
