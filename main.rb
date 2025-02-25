@@ -1,4 +1,5 @@
 
+############## FUNCION DEL JUEGO    
 def piepaptij()
 
   # Opciones disponibles para elegir.
@@ -22,38 +23,39 @@ def piepaptij()
   # Eleccion de la computadora.
   elec_pc = opciones.sample
 
+  # Mostrar la eleccion de cada jugador.
+  puts "Tú escogiste --> #{elec_usuario} <-- y la computadora --> #{elec_pc} <--."
+
+  # Estructura case para determinar quien gana.
   case
     when elec_usuario == elec_pc
-      puts "Tú escogiste --> #{elec_usuario} <-- y la computadora --> #{elec_pc} <--."
       puts "==> Tenemos un empate. 😮"
 
     when elec_usuario == "piedra" && elec_pc == "tijera"
-      puts "Tú escogiste --> #{elec_usuario} <-- y la computadora --> #{elec_pc} <--."
-      puts "==> 🎉🎊🏆 Felicidades por tu victoria. 🏆🎊🎉"
+       puts "==> 🎉🎊🏆 Felicidades por tu victoria. 🏆🎊🎉"
       victoria = "usuario"
 
     when elec_usuario == "papel" && elec_pc == "piedra"
-      puts "Tú escogiste --> #{elec_usuario} <-- y la computadora --> #{elec_pc} <--."
-      puts "==> 🎉🎊🏆 Felicidades por tu victoria. 🏆🎊🎉"
+       puts "==> 🎉🎊🏆 Felicidades por tu victoria. 🏆🎊🎉"
       victoria = "usuario"
 
     when elec_usuario == "tijera" && elec_pc == "papel"
-      puts "Tú escogiste --> #{elec_usuario} <-- y la computadora --> #{elec_pc} <--."
-      puts "==> 🎉🎊🏆 Felicidades por tu victoria. 🏆🎊🎉"
+       puts "==> 🎉🎊🏆 Felicidades por tu victoria. 🏆🎊🎉"
       victoria = "usuario"
 
     else
-      puts "Tú escogiste --> #{elec_usuario} <-- y la computadora --> #{elec_pc} <--."
-      puts "==> 😿 Diablos, que mala suerte, perdiste, lo siento.😔 😿"
+       puts "==> 😿 Diablos, que mala suerte, perdiste, lo siento.😔 😿"
       victoria = "computadora"
 
-  end
+  end # <-- Fin del case que determina quien gana
 
-  return victoria
+  return victoria # <-- Se retorna quien es el ganador del juego.
 
-end
+end # <-------- Fin de funcion del juego
 
 
+
+###################### Funcion de 3 de 3
 def quienGana()
 
   victoria_total_pc = 0
@@ -64,7 +66,7 @@ def quienGana()
     ganador = piepaptij()
 
   if ganador == "computadora"
-    victoria_total_pc = victoria_total_pc +1
+    victoria_total_pc = victoria_total_pc + 1
   elsif ganador == "usuario"
     victoria_total_usuario = victoria_total_usuario + 1
   end
@@ -76,9 +78,20 @@ def quienGana()
 
 puts "\n ++++++++++++++++++++++++++++++++++++++++++++"
 if victoria_total_pc < victoria_total_usuario
-  puts "\n 🎉🥳 🏆Felicidades, Tú eres el ganador🏆 🥳🎉"
+  puts "\n 🎉🥳 🏆Felicidades, Tú eres el ganador definitivo.🏆 🥳🎉"
 else
- puts "\n 😿🤙 Perdiste, que mala suerte 😿🤙"
+ puts "\n 😿🤙 Perdiste, que mala suerte, la computadora es la ganadora.😿🤙"
 end
 
 puts "\n ++++++++++++++++++++++++++++++++++++++++++++"
+
+end #<---- Fin de funcion 3 de 3
+
+quienGana()
+
+# Implementación para elegir jugar una vez o 2 de 3
+#jugar = true
+#
+#while jugar
+# 
+#end
