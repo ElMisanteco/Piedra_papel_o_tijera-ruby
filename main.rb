@@ -87,11 +87,33 @@ puts "\n ++++++++++++++++++++++++++++++++++++++++++++"
 
 end #<---- Fin de funcion 3 de 3
 
-quienGana()
-
 # Implementación para elegir jugar una vez o 2 de 3
-#jugar = true
-#
-#while jugar
-# 
-#end
+jugar = true
+
+while true
+
+  puts ""
+  puts " 1 ==> jugar una vez"
+  puts " 2 ==> Jugar 2 de tres"
+  print "¿Qué modo de juego quieres jugar? "
+  respuesta_tipo_juego = gets.chomp.to_i
+
+  if respuesta_tipo_juego == 1
+
+    puts "\nJugar una vez..."
+    piepaptij
+    return false
+
+  elsif respuesta_tipo_juego == 2
+
+    puts "\nJugar 2 de tres..."
+    quienGana
+    return false
+
+  else
+
+    puts "\nEscribe una opción válida."
+
+  end
+
+end
