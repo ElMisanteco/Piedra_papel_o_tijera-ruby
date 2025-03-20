@@ -1,6 +1,14 @@
+########################################################################
+# piepaptij -> Es la funcion que contiene la dinamica del juego        #
+# dos_de_tres -> Es la funcion que ejecuta la dinámica de juego 2 de 3 #
+#                                                                      #
+#                                                                      #
+#                                                                      #
+########################################################################
 
-############## FUNCION DEL JUEGO    
-def piepaptij()
+
+##############  FUNCIÓN PRINCIPAL DEL JUEGO   ############################################################################
+def piepaptij
 
   # Opciones disponibles para elegir.
   opciones = ["piedra", "papel", "tijera"]
@@ -51,12 +59,16 @@ def piepaptij()
 
   return victoria # <-- Se retorna quien es el ganador del juego.
 
-end # <-------- Fin de funcion del juego
+end # <-------- Fin de funcion principal del juego
+
+
+###########################################################################################################3
 
 
 
-###################### Funcion de 3 de 3
-def quienGana()
+###################### Funcion  2 de 3 ########################################################### 
+
+def dos_de_tres
 
   victoria_total_pc = 0
   victoria_total_usuario = 0
@@ -76,6 +88,7 @@ def quienGana()
 
   end until victoria_total_pc == 2 || victoria_total_usuario == 2
 
+# El bloque siguiente identifica quien tiene más victorias y decreta al ganador.
 puts "\n ++++++++++++++++++++++++++++++++++++++++++++"
 if victoria_total_pc < victoria_total_usuario
   puts "\n 🎉🥳 🏆Felicidades, Tú eres el ganador definitivo.🏆 🥳🎉"
@@ -85,18 +98,26 @@ end
 
 puts "\n ++++++++++++++++++++++++++++++++++++++++++++"
 
-end #<---- Fin de funcion 3 de 3
+end #<---- Fin de funcion 2 de 3
+
+#####################################################################################################
+
 
 # Implementación para elegir jugar una vez o 2 de 3
 
 jugar = true # <-- Esta variable es la que se toma en cuenta para seguir jugando o no (Posteriormente tendrá un uso más especifico)
 
+
+##########################################################################################################################################################################
+#
+#
+#
 while true # <-- Este bucle es el que decidirá si seguir jugando o no.
 
   # Menú de opciones.
   puts "" # <-- solo inserta un espacio.
   puts " 1 ==> jugar una vez"
-  puts " 2 ==> Jugar 2 de tres"
+  puts " 2 ==> Jugar 2 de 3"
   print "¿Qué modo de juego quieres jugar? " #<-- Indica al usuario que escriba la opción deseada.
   respuesta_tipo_juego = gets.chomp.to_i # <--Captura la elección del usuario y la transforma en número entero.
 
@@ -109,8 +130,8 @@ while true # <-- Este bucle es el que decidirá si seguir jugando o no.
 
   elsif respuesta_tipo_juego == 2
 
-    puts "\nJugar 2 de tres..." # <-- Se indica el tipod e juego.
-    quienGana #<-- Se llama al método que ejecuta el juego en modo 2 de 3.
+    puts "\nJugar 2 de 3..." # <-- Se indica el tipod e juego.
+    dos_de_tres #<-- Se llama al método que ejecuta el juego en modo 2 de 3.
     return false # <- En caso de que el usuario escoja esta opción, después de ejecutar la acción de juego, se retorna <falso> para que el bucle se termine.
 
   else
@@ -120,3 +141,6 @@ while true # <-- Este bucle es el que decidirá si seguir jugando o no.
   end # <-- find e estructura if
 
 end # <-- Fin de estructura while
+#
+#
+###################################################################################################################################
